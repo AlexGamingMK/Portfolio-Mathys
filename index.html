@@ -27,6 +27,7 @@
       color: var(--text-color);
       line-height: 1.6;
       overflow-x: hidden;
+      user-select: none;
     }
 
     .container {
@@ -296,6 +297,128 @@
       color: var(--primary-color);
     }
 
+
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .popup-content {
+      position: relative;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: white;
+      width: 100%;
+      max-width: 750px;
+      max-height: 80vh;
+      /* Limite la hauteur maximale du popup à 80% de la hauteur de la fenêtre */
+      border-radius: 10px;
+      overflow-y: auto;
+      /* Ajoute une barre de défilement si le contenu dépasse */
+    }
+
+    /* Effet d'apparition du popup */
+    @keyframes popupOpen {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Style pour le texte dans le popup */
+    .popup-content h2,
+    .popup-content h3,
+    .popup-content h4 {
+      margin-top: 15px;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      border-bottom: 2px solid #f4f4f4;
+      padding-bottom: 10px;
+      font-size: 1.5em;
+    }
+
+    .popup-content p,
+    .popup-content ul,
+    .popup-content pre {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-size: 1em;
+      color: #444;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .popup-content pre {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+      /* Ajoute une barre de défilement horizontale si le code dépasse */
+    }
+
+    /* Style pour les images dans le popup */
+    .popup-content img {
+      justify-content: center;
+      max-width: 100%;
+      margin-top: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      /* Ombre sur les images */
+    }
+
+    /* Bouton de fermeture */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #ff5e5e;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .close-btn:hover {
+      background-color: #ff4040;
+    }
+
+    /* Amélioration visuelle pour les listes */
+    .popup-content ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .popup-content ul li {
+      margin-bottom: 10px;
+      font-size: 1em;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .popup-content ul li:before {
+      content: "✔️";
+      /* Icône personnalisée */
+      color: #3ac47d;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
     .contact form {
       max-width: 600px;
       margin: 0 auto;
@@ -443,89 +566,87 @@
       <div class="container">
         <h2>Mes Certifications</h2>
         <div class="certifs">
-          <div class="certif">
-            <img src="./img/Projets/samsung.png" alt="Interface utilisateur moderne d'une application de gestion de tâches" width="300" height="200">
-            <a href="https://mathysmalingre.github.io/site_mathys/" target="_blank">
-              <div class="certif-info">
-                <h3>Site Samsung</h3>
-                <p>Projet début de première année, pour apprendre le HTML / CSS</p>
-              </div>
-            </a>
+          <div class="certif" data-certif="1">
+            <img src="./img/certifs/html-css.png"
+              alt="Interface utilisateur moderne d'une application de gestion de tâches" width="300" height="200">
+            <div class="certif-info">
+              <h3>HTML / CSS</h3>
+            </div>
+          </div>
+          <div class="certif" data-certif="2">
+            <img src="./img/certifs/certif-reseau.jpeg" alt="Application mobile de fitness avec design minimaliste"
+              width="300" height="200">
+            <div class="certif-info">
+              <h3>Adressage réseau et dépannage de base </h3>
+            </div>
+          </div>
+          <div class="certif" data-certif="3">
+            <img src="./img/Projets/samsung.png"
+              alt="Interface utilisateur moderne d'une application de gestion de tâches" width="300" height="200">
+            <div class="certif-info">
+              <h3>Site Samsung</h3>
+              <p>Projet début de première année, pour apprendre le HTML / CSS</p>
+            </div>
           </div>
           <div class="certif">
-            <img src="./img/Projets/netmovie.png" alt="Application mobile de fitness avec design minimaliste" width="300" height="200">
-            <a href="https://www.netmovie.fr" target="_blank">
-              <div class="certif-info">
-                <h3>NetMovie</h3>
-                <p>Participation au projet, j'ai aider pour les idée du site et pour incorporer des films sur le site
-                </p><br>
-                <h6>Projet créer par Alexandre Philip</h6>
-              </div>
-            </a>
+            <img src="./img/Projets/netmovie.png" alt="Application mobile de fitness avec design minimaliste"
+              width="300" height="200">
+            <div class="certif-info">
+              <h3>NetMovie</h3>
+              <p>Participation au projet, j'ai aider pour les idée du site et pour incorporer des films sur le site
+              </p><br>
+              <h6>Projet créer par Alexandre Philip</h6>
+            </div>
           </div>
           <div class="certif">
-            <img src="./img/Projets/samsung.png" alt="Interface utilisateur moderne d'une application de gestion de tâches" width="300" height="200">
-            <a href="https://mathysmalingre.github.io/site_mathys/" target="_blank">
-              <div class="certif-info">
-                <h3>Site Samsung</h3>
-                <p>Projet début de première année, pour apprendre le HTML / CSS</p>
-              </div>
-            </a>
+            <img src="./img/Projets/samsung.png"
+              alt="Interface utilisateur moderne d'une application de gestion de tâches" width="300" height="200">
+            <div class="certif-info">
+              <h3>Site Samsung</h3>
+              <p>Projet début de première année, pour apprendre le HTML / CSS</p>
+            </div>
           </div>
           <div class="certif">
-            <img src="./img/Projets/netmovie.png" alt="Application mobile de fitness avec design minimaliste" width="300" height="200">
-            <a href="https://www.netmovie.fr" target="_blank">
-              <div class="certif-info">
-                <h3>NetMovie</h3>
-                <p>Participation au projet, j'ai aider pour les idée du site et pour incorporer des films sur le site
-                </p><br>
-                <h6>Projet créer par Alexandre Philip</h6>
-              </div>
-            </a>
+            <img src="./img/Projets/netmovie.png" alt="Application mobile de fitness avec design minimaliste"
+              width="300" height="200">
+            <div class="certif-info">
+              <h3>NetMovie</h3>
+              <p>Participation au projet, j'ai aider pour les idée du site et pour incorporer des films sur le site
+              </p><br>
+              <h6>Projet créer par Alexandre Philip</h6>
+            </div>
           </div>
           <div class="certif">
-            <img src="./img/Projets/samsung.png" alt="Interface utilisateur moderne d'une application de gestion de tâches" width="300" height="200">
-            <a href="https://mathysmalingre.github.io/site_mathys/" target="_blank">
-              <div class="certif-info">
-                <h3>Site Samsung</h3>
-                <p>Projet début de première année, pour apprendre le HTML / CSS</p>
-              </div>
-            </a>
+            <img src="./img/Projets/samsung.png"
+              alt="Interface utilisateur moderne d'une application de gestion de tâches" width="300" height="200">
+            <div class="certif-info">
+              <h3>Site Samsung</h3>
+              <p>Projet début de première année, pour apprendre le HTML / CSS</p>
+            </div>
           </div>
           <div class="certif">
-            <img src="./img/Projets/netmovie.png" alt="Application mobile de fitness avec design minimaliste" width="300" height="200">
-            <a href="https://www.netmovie.fr" target="_blank">
-              <div class="certif-info">
-                <h3>NetMovie</h3>
-                <p>Participation au projet, j'ai aider pour les idée du site et pour incorporer des films sur le site
-                </p><br>
-                <h6>Projet créer par Alexandre Philip</h6>
-              </div>
-            </a>
-          </div>
-          <div class="certif">
-            <img src="./img/Projets/samsung.png" alt="Interface utilisateur moderne d'une application de gestion de tâches" width="300" height="200">
-            <a href="https://mathysmalingre.github.io/site_mathys/" target="_blank">
-              <div class="certif-info">
-                <h3>Site Samsung</h3>
-                <p>Projet début de première année, pour apprendre le HTML / CSS</p>
-              </div>
-            </a>
-          </div>
-          <div class="certif">
-            <img src="./img/Projets/netmovie.png" alt="Application mobile de fitness avec design minimaliste" width="300" height="200">
-            <a href="https://www.netmovie.fr" target="_blank">
-              <div class="certif-info">
-                <h3>NetMovie</h3>
-                <p>Participation au projet, j'ai aider pour les idée du site et pour incorporer des films sur le site
-                </p><br>
-                <h6>Projet créer par Alexandre Philip</h6>
-              </div>
-            </a>
+            <img src="./img/Projets/netmovie.png" alt="Application mobile de fitness avec design minimaliste"
+              width="300" height="200">
+            <div class="certif-info">
+              <h3>NetMovie</h3>
+              <p>Participation au projet, j'ai aider pour les idée du site et pour incorporer des films sur le site
+              </p><br>
+              <h6>Projet créer par Alexandre Philip</h6>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Popup Modal -->
+    <!-- Popup structure -->
+    <div id="popup" class="popup">
+      <div class="popup-content" id="popup-content">
+        <!-- Contenu dynamique sera inséré ici -->
+      </div>
+      <span class="close-btn">&times;</span>
+    </div>
+
 
     <!-- PROJETS -->
     <section id="projets" class="section">
@@ -597,6 +718,7 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="./script-popup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script>
     // Animations GSAP
