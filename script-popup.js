@@ -61,9 +61,8 @@ const certifData = {
                 text: `
                     <h2>Adressage réseau et dépannage de base</h2>
                     <p><strong>Formation Skills For All (CISCO)</strong></p>
-                    <p><strong>Lien internet :</strong> <a href="#" target="_blank">
-                    CISCO (LIEN A RAJOUTER)</a></p>
-                    <p>Dans cette formation, j'ai appris comment utiliser HTML5 et CSS3, les deux langages de programmation à la base de tous les sites web.</p>
+                    <p><strong>Lien internet :</strong> <a href="https://www.netacad.com/courses/network-addressing-and-basic-troubleshooting?courseLang=fr-FR&instance_id=c2470b02-11a1-4c4e-9fc0-4e97dc92bbd6" target="_blank">
+                    CISCO</a></p>
                 `
             },
             {
@@ -105,13 +104,96 @@ const certifData = {
     3: {
         sections: [
             {
-                text: "Voici la description complète pour le Certif 3.",
+                text: `
+                    <h2>Introduction à la cyber-sécurité</h2>
+                    <p><strong>Formation Skills For All (CISCO)</strong></p>
+                    <p><strong>Lien internet :</strong> <a href="https://www.netacad.com/courses/network-addressing-and-basic-troubleshooting?courseLang=fr-FR&instance_id=c2470b02-11a1-4c4e-9fc0-4e97dc92bbd6" target="_blank">
+                    CISCO</a></p>
+                    <p>Ce cours explore les cybertendances, les menaces et la sécurité dans le cyberespace, et la protection des données personnelles et de l’entreprise. </p>
+                `
+            },
+            {
+                text: `
+                    <h3>Pourquoi cette formation ?</h3>
+                    <ul>
+                        <li>Apprendre les bases de la cybersécurité pour protéger votre vie numérique personnelle</li>
+                        <li>Avoir un aperçu des plus grands défis de sécurité auxquels les entreprises, les gouvernements et les établissements d'enseignement sont confrontés aujourd'hui</li>
+                    </ul>
+                `
+            },
+            {
+                text: `
+                    <h3>Mes objectifs</h3>
+                    <ul>
+                        <li>Apprendre les bases du réseaux</li>
+                    </ul>
+                `
+            },
+            {
+                text: `
+                    <h3>Les outils que j'ai utilisé</h3>
+                    <ul>
+                        <li>CISCO Packet Tracer</li>
+                    </ul>
+                `
+            },
+            {
+                text: `
+                    <h3>Ma progression</h3>
+                `,
                 images: [
                     "https://via.placeholder.com/500x300"
                 ]
             }
         ]
-    }
+    },
+    4: {
+        sections: [
+            {
+                text: `
+                    <h2>Les bases du matériel informatique</h2>
+                    <p><strong>Formation Skills For All (CISCO)</strong></p>
+                    <p><strong>Lien internet :</strong> <a href="https://www.netacad.com/courses/computer-hardware-basics?courseLang=fr-FR&instance_id=12fceb37-260f-43fe-9ee4-31f978edbeb4" target="_blank">
+                    CISCO</a></p>
+                    <p>Ce cours enseigne les bases des ordinateurs et des terminaux mobiles en couvrant les concepts de base et les compétences nécessaires pour installer les composants nécessaires à la création, à la réparation ou à la mise à niveau les ordinateurs personnels. </p>
+                `
+            },
+            {
+                text: `
+                    <h3>Pourquoi cette formation ?</h3>
+                    <ul>
+                        <li>Installer des composants pour assembler, réparer ou mettre à niveau des ordinateurs personnels</li>
+                        <li>Expliquer les caractéristiques et les fonctions des ordinateurs portables</li>
+                        <li>Expliquer les caractéristiques et les fonctions d'autres appareils mobiles</li>
+                    </ul>
+                `
+            },
+            {
+                text: `
+                    <h3>Mes objectifs</h3>
+                    <ul>
+                        <li>Apprendre les bases du réseaux</li>
+                    </ul>
+                `
+            },
+            {
+                text: `
+                    <h3>Les outils que j'ai utilisé</h3>
+                    <ul>
+                        <li>CISCO Packet Tracer</li>
+                    </ul>
+                `
+            },
+            {
+                text: `
+                    <h3>Ma progression</h3>
+                `,
+                images: [
+                    "https://via.placeholder.com/500x300"
+                ]
+            }
+        ]
+    },
 }
 
 // Affichage du popup
